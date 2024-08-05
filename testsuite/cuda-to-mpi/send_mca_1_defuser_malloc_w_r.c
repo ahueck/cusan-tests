@@ -3,8 +3,8 @@
 // RUN: %cusan-mpiexec -n 2 %cutests_test_dir/%basename_t.exe 2>&1 | %filecheck %s
 // clang-format on
 
-// CHECK-DAG: ThreadSanitizer: data race
-// CHECK-DAG: Thread T{{[0-9]+}} 'cuda_stream'
+// CHECK-NOT: ThreadSanitizer: data race
+// CHECK-NOT: Thread T{{[0-9]+}} 'cuda_stream'
 
 #include "../support/gpu_mpi.h"
 

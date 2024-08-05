@@ -36,8 +36,9 @@ $ cmake ..
 In [root level](./) created `build` folder `cmake ..` generates:
 - Targets to build, and run on the current node, see [CMakeLists](testsuite/CMakeLists.txt): 
     - `make check-cutests`: All
-    - `make check-cutests-mpi-to-cuda`: Only MPI to cuda races
-    - `make check-cutests-cuda-to-mpi`: Only cuda to MPI races
+    - `make check-cutests-mpi-to-cuda`: Only MPI to CUDA races
+    - `make check-cutests-cuda-to-mpi`: Only CUDA to MPI races
+    - `make check-cutests-cuda-only`: Only CUDA races
 
 ### Jacobi Targets
 
