@@ -21,23 +21,23 @@ find_package(MPI REQUIRED)
 
 # Not so portable, but suffices
 find_program(cusan_mpicxx
-    NAMES cucorr-mpic++ cusan-mpic++
+    NAMES cusan-mpic++
     PATHS ${CUSAN_PATH} ${CUSAN_PATH}/bin
     NO_DEFAULT_PATH
 )
 find_program(cusan_mpicc
-    NAME cucorr-mpicc cusan-mpicc
+    NAME cusan-mpicc
     PATHS ${CUSAN_PATH} ${CUSAN_PATH}/bin
     NO_DEFAULT_PATH
 )
 find_library(lib_cusan_runtime
-    NAMES CucorrRuntime CusanRuntime
+    NAMES CusanRuntime
     PATHS ${CUSAN_PATH}/lib ${CUSAN_PATH}
     NO_DEFAULT_PATH
 )
 
 find_library(lib_cusan_interceptor
-    NAMES CucorrMPIInterceptor CusanMPIInterceptor
+    NAMES CusanMPIInterceptor
     PATHS ${CUSAN_PATH}/lib ${CUSAN_PATH}
     NO_DEFAULT_PATH
 )
